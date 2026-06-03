@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Mobile Astrophotography</title>
+    <style>
+        /* Base Cosmic Styling */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background-color: #050505; 
+            color: #e0e0e0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 80px 20px 40px 20px;
+            background: radial-gradient(circle at top, #111122 0%, #050505 70%);
+        }
+        header h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #8888aa;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+        /* Rig Spec Grid */
+        .rig-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .rig-card {
+            background-color: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .rig-card h3 { color: #aa88ff; margin-bottom: 8px; font-size: 1.2rem; }
+        .rig-card p { font-size: 0.95rem; color: #b0b0b0; }
+
+        /* Gallery Sections */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .photo-card {
+            background-color: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .photo-card:hover {
+            transform: scale(1.02);
+            border-color: #444;
+        }
+        .photo-placeholder {
+            width: 100%;
+            height: 240px;
+            background-color: #151515;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        /* Simulated image behavior */
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .photo-info {
+            padding: 15px;
+        }
+        .photo-info h4 { color: #fff; margin-bottom: 5px; }
+        .photo-info p { font-size: 0.85rem; color: #888; }
+        .tech-tag {
+            display: inline-block;
+            background-color: #221133;
+            color: #ccbbff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #111;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MOBILE COSMOS</h1>
+        <p>Deep Sky & Planetary Astrophotography via Smartphone Optics</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- The Imaging Rig Section -->
+        <h2>The Imaging Station</h2>
+        <div class="rig-grid">
+            <div class="rig-card">
+                <h3>Optics</h3>
+                <p><strong>Celestron NexStar 8SE</strong><br>Schmidt-Cassegrain OTA tracking light across an 8-inch primary mirror aperture.</p>
+            </div>
+            <div class="rig-card">
+                <h3>Tracking Mount</h3>
+                <p><strong>NexStar Evolution Alt-Az</strong><br>Integrated Wi-Fi tracking platform using sky alignment modeling to counter planetary drift.</p>
+            </div>
+            <div class="rig-card">
+                <h3>Sensor & Capture</h3>
+                <p><strong>Samsung Galaxy S24</strong><br>High-resolution mobile sensor using manual exposure tracking, RAW acquisition, and optical digiscoping adapters.</p>
+            </div>
+        </div>
+
+        <!-- Deep Sky Portfolio -->
+        <h2>Deep Sky Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Card 1 -->
+            <div class="photo-card">
+                <div class="photo-placeholder">
+                    <!-- Replace the src below with your actual processed WebP image link -->
+                    <img src="https://unsplash.com" alt="Orion Nebula">
+                </div>
+                <div class="photo-info">
+                    <h4>The Orion Nebula (M42)</h4>
+                    <p>Stacked stack of 10-second exposures bypassed via Alt-Az field rotation parameters.</p>
+                    <span class="tech-tag">Expert RAW App • 25 Min Total Integration</span>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="photo-card">
+                <div class="photo-placeholder">
+                    <img src="https://unsplash.com" alt="Andromeda Galaxy">
+                </div>
+                <div class="photo-info">
+                    <h4>Andromeda Galaxy (M31)</h4>
+                    <p>Core structures captured using high-ISO calibration frames to control mobile image noise.</p>
+                    <span class="tech-tag">Siril Mobile Stack • ISO 1600</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Planetary Portfolio -->
+        <h2>Planetary & Lunar Targets</h2>
+        <div class="gallery-grid" style="margin-top: 20px;">
+            <!-- Card 3 -->
+            <div class="photo-card">
+                <div class="photo-placeholder">
+                    <img src="https://unsplash.com" alt="Gas Giant">
+                </div>
+                <div class="photo-info">
+                    <h4>Jupiter & Galilean Moons</h4>
+                    <p>Lucky imaging stream capturing rapid frames to bypass local atmospheric disturbance.</p>
+                    <span class="tech-tag">4K 60fps Video Extract • PIPP/Autostakkert</span>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="photo-card">
+                <div class="photo-placeholder">
+                    <img src="https://unsplash.com" alt="Moon Surface">
+                </div>
+                <div class="photo-info">
+                    <h4>Lunar Tycho Crater Detail</h4>
+                    <p>High-magnification lunar sweep highlighting shadows across the southern highlands.</p>
+                    <span class="tech-tag">Direct Eyepiece Projection</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mobile Cosmos Astrophotography. Powered by NexStar 8SE & Galaxy S24 Optics.</p>
+    </footer>
+
+</body>
+</html>
